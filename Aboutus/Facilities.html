@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <div id="navbar"></div>
+<script>
+fetch("../navbar.html")
+.then(response => response.text())
+.then(data => {
+  document.getElementById("navbar").innerHTML = data;
+
+  // MENU TOGGLE
+  const menuToggle = document.getElementById("menu-toggle");
+  const navMenu = document.getElementById("nav-menu");
+
+  if(menuToggle){
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("hidden");
+    });
+  }
+
+  // MOBILE DROPDOWN
+  const dropdowns = document.querySelectorAll("#nav-menu .group");
+
+  dropdowns.forEach(drop => {
+    drop.addEventListener("click", function(e){
+      if(window.innerWidth < 1024){
+        const submenu = this.querySelector("ul");
+        if(e.target.tagName !== "A" && submenu){
+          submenu.classList.toggle("hidden");
+        }
+      }
+    });
+  });
+
+});
+</script>
+
+    <div class="relative w-full overflow-hidden">
+
+        <div class="relative h-[400px] bg-cover bg-center flex items-center justify-center"
+            style="background-image: url('../src/facilities.jpg')">
+
+            <div class="absolute "></div>
+
+            <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+                <svg class="relative block w-full h-[150px]" preserveAspectRatio="none" viewBox="0 0 1200 120">
+                    <path d="M0,80 L400,120 L1200,40 L1200,120 L0,120 Z" fill="#00335a"></path>
+                </svg>
+            </div>
+
+            <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+                <svg class="relative block w-full h-[100px]" preserveAspectRatio="none" viewBox="0 0 1200 120">
+                    <path d="M0,60 L600,120 L1200,20 L1200,120 L0,120 Z" fill="#209ca6"></path>
+                </svg>
+            </div>
+        </div>
+
+        <div class="bg-[#209ca6] py-16 px-10">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-white text-5xl font-bold">Facilities</h2>
+            </div>
+        </div>
+    </div>
+
+
+<div class="max-w-7xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-4 gap-6">
+
+<!-- LEFT SIDEBAR -->
+<div class="space-y-6">
+
+<!-- Video -->
+<div class="bg-white shadow">
+<div class="bg-blue-800 text-white px-4 py-2 font-semibold">
+Corporate Video
+</div>
+
+<iframe class="w-full h-48"
+src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+</div>
+
+
+<!-- Find Specialist -->
+<div class="bg-white shadow">
+
+<div class="bg-blue-800 text-white px-4 py-2 font-semibold">
+Find A Specialist
+</div>
+
+<div class="p-4 space-y-3">
+
+<select class="w-full border p-2">
+<option>By Department</option>
+<option>Cardiology</option>
+<option>Orthopedic</option>
+<option>Neurology</option>
+</select>
+
+<select class="w-full border p-2">
+<option>By Doctor</option>
+<option>Doctor 1</option>
+<option>Doctor 2</option>
+</select>
+
+</div>
+</div>
+
+
+<!-- Call Back -->
+<div class="bg-white shadow">
+
+<div class="bg-blue-800 text-white px-4 py-2 font-semibold">
+Request A Call Back
+</div>
+
+<div class="p-4 space-y-3">
+
+<input type="text" placeholder="Full Name" class="w-full border p-2">
+
+<input type="text" placeholder="Phone Number" class="w-full border p-2">
+
+<input type="email" placeholder="Email" class="w-full border p-2">
+
+<textarea placeholder="Enter Message" class="w-full border p-2"></textarea>
+
+<button class="bg-teal-600 text-white px-4 py-2 hover:bg-teal-700">
+Send Request
+</button>
+
+</div>
+</div>
+
+</div>
+
+
+<!-- RIGHT CONTENT -->
+<div class="lg:col-span-3">
+
+<h2 class="text-2xl text-blue-900 font-semibold mb-4 border-b pb-2">
+Facilities
+</h2>
+
+
+<!-- Accordion -->
+
+<div class="space-y-3">
+
+<!-- Item -->
+<div class="border facility">
+
+<button class="w-full flex items-center text-left facility-btn">
+<div class="bg-teal-600 text-white w-12 h-12 flex items-center justify-center text-xl icon">
++
+</div>
+
+<div class="flex-1 px-4 py-3 bg-gray-50">
+130 beds
+</div>
+
+</button>
+
+<div class="hidden px-6 py-4 text-gray-600 bg-white facility-content">
+Hospital has 130 fully equipped beds with modern patient care system.
+</div>
+
+</div>
+
+
+<div class="border facility">
+
+<button class="w-full flex items-center text-left facility-btn">
+<div class="bg-teal-600 text-white w-12 h-12 flex items-center justify-center text-xl icon">
++
+</div>
+
+<div class="flex-1 px-4 py-3 bg-gray-50">
+50 beds ICU Including Isolation ICU
+</div>
+
+</button>
+
+<div class="hidden px-6 py-4 text-gray-600 bg-white facility-content">
+Advanced ICU facilities with isolation support.
+</div>
+
+</div>
+
+
+<div class="border facility">
+
+<button class="w-full flex items-center text-left facility-btn">
+<div class="bg-teal-600 text-white w-12 h-12 flex items-center justify-center text-xl icon">
++
+</div>
+
+<div class="flex-1 px-4 py-3 bg-gray-50">
+Latest Cathlab with 4D TEE Probe with EchoCardiography Machine & TMT
+</div>
+
+</button>
+
+<div class="hidden px-6 py-4 text-gray-600 bg-white facility-content">
+Latest Cathlab technology with modern diagnostic machines.
+</div>
+
+</div>
+
+
+<div class="border facility">
+
+<button class="w-full flex items-center text-left facility-btn">
+
+<div class="bg-teal-600 text-white w-12 h-12 flex items-center justify-center text-xl">
++
+</div>
+
+
+<div class="flex-1 px-4 py-3 bg-gray-50">
+ECMO therapy
+</div>
+
+</button>
+
+<div class="hidden px-6 py-4 text-gray-600 bg-white facility-content">
+Advanced life support ECMO therapy available.
+</div>
+
+</div>
+
+
+<div class="space-y-3">
+
+<!-- 1 -->
+<div class="border facility">
+<button class="w-full flex items-center facility-btn text-left">
+
+<div class="bg-teal-600 text-white w-12 h-12 flex items-center justify-center text-xl icon">
++
+</div>
+
+<div class="flex-1 px-4 py-3 bg-gray-50">
+130 beds
+</div>
+
+</button>
+
+<div class="hidden facility-content px-6 py-4 bg-white">
+Hospital has 130 fully equipped beds.
+</div>
+</div>
+
+
+<!-- 2 -->
+<div class="border facility">
+<button class="w-full flex items-center facility-btn text-left">
+
+<div class="bg-teal-600 text-white w-12 h-12 flex items-center justify-center text-xl icon">
++
+</div>
+
+<div class="flex-1 px-4 py-3 bg-gray-50">
+50 beds ICU Including Isolation ICU
+</div>
+
+</button>
+
+<div class="hidden facility-content px-6 py-4 bg-white">
+Advanced ICU facilities available.
+</div>
+</div>
+
+
+<!-- 3 -->
+<div class="border facility">
+<button class="w-full flex items-center facility-btn text-left">
+
+<div class="bg-teal-600 text-white w-12 h-12 flex items-center justify-center text-xl icon">
++
+</div>
+
+<div class="flex-1 px-4 py-3 bg-gray-50">
+Latest Cathlab with 4D TEE Probe with EchoCardiography Machine & TMT
+</div>
+
+</button>
+
+<div class="hidden facility-content px-6 py-4 bg-white">
+Latest Cathlab technology available.
+</div>
+</div>
+
+
+<!-- 4 -->
+<div class="border facility">
+<button class="w-full flex items-center facility-btn text-left">
+
+<div class="bg-teal-600 text-white w-12 h-12 flex items-center justify-center text-xl icon">
++
+</div>
+
+<div class="flex-1 px-4 py-3 bg-gray-50">
+4D TEE Probe
+</div>
+
+</button>
+
+<div class="hidden facility-content px-6 py-4 bg-white">
+Advanced diagnostic probe facility.
+</div>
+</div>
+
+
+<!-- 5 -->
+<div class="border facility">
+<button class="w-full flex items-center facility-btn text-left">
+
+<div class="bg-teal-600 text-white w-12 h-12 flex items-center justify-center text-xl icon">
++
+</div>
+
+<div class="flex-1 px-4 py-3 bg-gray-50">
+Complex Angioplasty with IVUS, Rotablation, FFR facility
+</div>
+
+</button>
+
+<div class="hidden facility-content px-6 py-4 bg-white">
+Advanced angioplasty procedures available.
+</div>
+</div>
+
+
+<!-- 6 -->
+<div class="border facility">
+<button class="w-full flex items-center facility-btn text-left">
+
+<div class="bg-teal-600 text-white w-12 h-12 flex items-center justify-center text-xl icon">
++
+</div>
+
+<div class="flex-1 px-4 py-3 bg-gray-50">
+Advance Class 100 Laminar Air flow - 5 Modular Operation Theatre
+</div>
+
+</button>
+
+<div class="hidden facility-content px-6 py-4 bg-white">
+Modern operation theatre system.
+</div>
+</div>
+
+
+<!-- 7 -->
+<div class="border facility">
+<button class="w-full flex items-center facility-btn text-left">
+
+<div class="bg-teal-600 text-white w-12 h-12 flex items-center justify-center text-xl icon">
++
+</div>
+
+<div class="flex-1 px-4 py-3 bg-gray-50">
+ECMO therapy
+</div>
+
+</button>
+
+<div class="hidden facility-content px-6 py-4 bg-white">
+ECMO advanced life support therapy.
+</div>
+</div>
+
+
+<!-- 8 -->
+<div class="border facility">
+<button class="w-full flex items-center facility-btn text-left">
+
+<div class="bg-teal-600 text-white w-12 h-12 flex items-center justify-center text-xl icon">
++
+</div>
+
+<div class="flex-1 px-4 py-3 bg-gray-50">
+CRRT & Hemo Dialysis
+</div>
+
+</button>
+
+<div class="hidden facility-content px-6 py-4 bg-white">
+Dialysis facilities available.
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+const buttons = document.querySelectorAll(".facility-btn");
+
+buttons.forEach(btn => {
+
+btn.addEventListener("click", () => {
+
+const content = btn.parentElement.querySelector(".facility-content");
+const icon = btn.querySelector(".icon");
+
+content.classList.toggle("hidden");
+
+if(content.classList.contains("hidden")){
+icon.innerHTML = "+";
+}else{
+icon.innerHTML = "-";
+}
+
+});
+
+});
+
+</script>
+
+<div id="footer"></div>
+
+<script>
+fetch("../footer.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
+});
+</script>
+
+</body>
+
+</html>

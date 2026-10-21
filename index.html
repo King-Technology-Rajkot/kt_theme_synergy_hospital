@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+ <div id="navbar"></div>
+
+<script>
+fetch("/navbar.html")
+.then(response => response.text())
+.then(data => {
+  document.getElementById("navbar").innerHTML = data;
+
+  // MENU TOGGLE
+  const menuToggle = document.getElementById("menu-toggle");
+  const navMenu = document.getElementById("nav-menu");
+
+  if(menuToggle){
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("hidden");
+    });
+  }
+
+  // MOBILE DROPDOWN
+  const dropdowns = document.querySelectorAll("#nav-menu .group");
+
+  dropdowns.forEach(drop => {
+    drop.addEventListener("click", function(e){
+      if(window.innerWidth < 1024){
+        const submenu = this.querySelector("ul");
+        if(e.target.tagName !== "A" && submenu){
+          submenu.classList.toggle("hidden");
+        }
+      }
+    });
+  });
+
+});
+</script>
+
+
+ <div class="w-full mx-auto font-sans relative">
+    <!-- ================= SLIDER ================= -->
+    <div class="swiper mySwiper relative w-full h-[280px] sm:h-[380px] md:h-[500px]">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide relative">
+                <img src="./src/8174fae96265ef381747ce8a6b09236c.jpg" class="w-full h-full object-cover">
+                <div class="absolute inset-0 flex flex-col justify-center px-4 md:pl-20 bg-black/20">
+                    <div class="text-white px-4 py-2 w-fit font-bold"></div>
+                    <div class="text-white px-6 py-3 w-fit text-xl sm:text-2xl md:text-4xl font-bold uppercase mt-1"></div>
+                </div>
+            </div>
+
+            <div class="swiper-slide relative">
+                <img src="./src/a51a5c8f743c3611cca70e782ce1c264.jpg" class="w-full h-full object-cover">
+                <div class="absolute inset-0 flex flex-col justify-center px-4 md:pl-20 bg-black/20">
+                    <div class="text-white px-4 py-2 w-fit font-bold"></div>
+                    <div class="text-white px-6 py-3 w-fit text-xl sm:text-2xl md:text-4xl font-bold uppercase mt-1"></div>
+                </div>
+            </div>
+
+            <div class="swiper-slide relative">
+                <img src="./src/a4986b24c6d0b68355b81701bcfd0087.png" class="w-full h-full object-cover">
+                <div class="absolute inset-0 flex flex-col justify-center px-4 md:pl-20 bg-black/20">
+                    <div class="text-white px-4 py-2 w-fit font-bold"></div>
+                    <div class="text-white px-6 py-3 w-fit text-xl sm:text-2xl md:text-4xl font-bold uppercase mt-1"></div>
+                </div>
+            </div>
+
+            <div class="swiper-slide relative">
+                <img src="./src/3d980cb02925b96371dbae73a1e63f32.jpeg" class="w-full h-full object-cover">
+                <div class="absolute inset-0 flex flex-col justify-center px-4 md:pl-20 bg-black/20">
+                    <div class="text-white px-4 py-2 w-fit font-bold"></div>
+                    <div class="text-white px-6 py-3 w-fit text-xl sm:text-2xl md:text-4xl font-bold uppercase mt-1"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-button-next !text-white !bg-[#14b8a6]/50 p-5 md:p-8 rounded-l-lg transition-all hover:!bg-[#14b8a6]"></div>
+        <div class="swiper-button-prev !text-white !bg-[#14b8a6]/50 p-5 md:p-8 rounded-r-lg transition-all hover:!bg-[#14b8a6]"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+
+    <!-- ================= VISION / MISSION ================= -->
+  <div
+ class="relative w-full max-w-6xl mx-auto px-4 md:px-6 
+        lg:absolute lg:left-1/2 lg:-translate-x-1/2 
+        lg:bottom-0 lg:translate-y-1/2 
+        z-10 mt-8 lg:mt-0">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 shadow-2xl">
+
+            <div class="bg-[#0054a6] text-white p-6 md:p-8 border-b md:border-b-0 md:border-r border-blue-400/30">
+                <h3 class="text-lg md:text-xl font-bold mb-3">Our Vision</h3>
+                <p class="text-xs md:text-sm leading-relaxed opacity-90">
+                    Passion for service, confidence of excellence and motivated for patient care, this is
+                    the benchmark practice we aim to create. Our experienced medical professionals put your
+                    healing needs first. Our goal is to make you feel better as quickly as possible.
+                </p>
+            </div>
+
+            <div class="relative h-56 md:h-auto overflow-hidden group cursor-pointer border-y md:border-y-0 md:border-x border-blue-400/30 bg-white">
+                <img src="./src/synergy-superspeciality-hospital-building1.jpg"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 flex items-center justify-center bg-black/10">
+                    <div class="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center border-2 border-white">
+                        <div class="w-0 h-0 border-t-[8px] border-t-transparent border-l-[14px] border-l-white border-b-[8px] border-b-transparent ml-1"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#0054a6] text-white p-6 md:p-8 border-t md:border-t-0 md:border-l border-blue-400/30">
+                <h3 class="text-lg md:text-xl font-bold mb-3">Our Mission</h3>
+                <p class="text-xs md:text-sm leading-relaxed opacity-90">
+                    With a mission to extend World Class healthcare solutions to the community through
+                    advances in medical technology, medical research and by adopting best man management
+                    practices - Synergy Superspeciality Hospital has launched its newly built flagship
+                    hospital in Rajkot.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<section class="max-w-7xl mx-auto px-4 py-16 text-center font-sans mt-[150px]">
+    
+    <div class="max-w-6xl mx-auto mb-16">
+        <p class="text-gray-600 text-base md:text-lg leading-relaxed italic">
+            It gives us immense pleasure to introduce 
+            <span class="font-bold text-[#0054a6]">Synergy Superspeciality Hospital</span>, Rajkot 
+            as one of the largest Superspeciality Hospitals in Saurashtra & Kutch region. 
+            It has tertiary care facilities like Anaesthetists, Cardiology & Cardiovascular and Thoracic Surgery, 
+            Neurosurgery & Neurology, Trauma & Joint Replacement Surgery, Critical Care Unit, GI Surgery & Gastroenterology, 
+            Oncology, Orthopaedic, Pathologist, Radiologist etc.
+        </p>
+    </div>
+
+    <div class="flex flex-col items-center justify-center">
+        <h2 class="text-3xl md:text-3xl font-bold text-[#0054a6] mb-4">
+            Get to Know Our Team of Experts
+        </h2>
+        
+        <div class="flex items-center justify-center text-[#14b8a6] text-4xl mt-2">
+            <div class="flex space-x-1">
+                <span class="rotate-45 block">🧬</span>
+            </div>
+        </div>
+    
+    </div>
+</section>
+
+<section class="max-w-[1440px] mx-auto px-4 py-16 font-sans">
+    
+  
+
+    <div class="relative px-4 md:px-12 group">
+        <div class="swiper expertsSwiper">
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide h-auto border border-gray-200 bg-white flex flex-col shadow-sm">
+                    <div class="p-4 flex-grow text-center">
+                        <img src="./src/82d6e36cd77e8eaa20814a08e47adfef (1).png" class="w-full h-64 object-cover object-top mb-4">
+                        <h3 class="text-[#0054a6] font-bold text-lg leading-tight">Dr. Vishal Poptani</h3>
+                        <p class="text-[11px] text-gray-700 font-semibold uppercase mt-2 min-h-[40px]">MD, DNB Cardiology FESC, FSCAI, FAPVS</p>
+                    </div>
+                    <div class="flex flex-col">
+                        <button class="w-full bg-[#0054a6] text-white py-2 text-sm font-semibold hover:bg-blue-900 transition">View Complete Profile</button>
+                        <button class="w-full bg-[#14b8a6] text-white py-3 text-sm font-bold uppercase hover:bg-teal-600 transition">Request An Appointment</button>
+                    </div>
+                </div>
+
+                <div class="swiper-slide h-auto border border-gray-200 bg-white flex flex-col shadow-sm">
+                    <div class="p-4 flex-grow text-center">
+                        <img src="./src/ab0273818e68b7fb96a62aae68964901.jpg" class="w-full h-64 object-cover object-top mb-4">
+                        <h3 class="text-[#0054a6] font-bold text-lg leading-tight">Dr. Nilesh Makadia</h3>
+                        <p class="text-[11px] text-gray-700 font-semibold uppercase mt-2 min-h-[40px]">MD, DNB Cardiology (Gold Medalist)</p>
+                    </div>
+                    <div class="flex flex-col">
+                        <button class="w-full bg-[#0054a6] text-white py-2 text-sm font-semibold hover:bg-blue-900 transition">View Complete Profile</button>
+                        <button class="w-full bg-[#14b8a6] text-white py-3 text-sm font-bold uppercase hover:bg-teal-600 transition">Request An Appointment</button>
+                    </div>
+                </div>
+
+                <div class="swiper-slide h-auto border border-gray-200 bg-white flex flex-col shadow-sm">
+                    <div class="p-4 flex-grow text-center">
+                        <img src="./src/9c7f8c20acf631e5ed48a2a90a97abe3.jpg" class="w-full h-64 object-cover object-top mb-4">
+                        <h3 class="text-[#0054a6] font-bold text-lg leading-tight">Dr. Satyam Udhreja</h3>
+                        <p class="text-[11px] text-gray-700 font-semibold uppercase mt-2 min-h-[40px]">MD, DM Cardiology (Gold Medalist), FACC</p>
+                    </div>
+                    <div class="flex flex-col">
+                        <button class="w-full bg-[#0054a6] text-white py-2 text-sm font-semibold hover:bg-blue-900 transition">View Complete Profile</button>
+                        <button class="w-full bg-[#14b8a6] text-white py-3 text-sm font-bold uppercase hover:bg-teal-600 transition">Request An Appointment</button>
+                    </div>
+                </div>
+
+                <div class="swiper-slide h-auto border border-gray-200 bg-white flex flex-col shadow-sm">
+                    <div class="p-4 flex-grow text-center">
+                        <img src="./src/97f048c4ead02a5008bed45f05980478.jpg" class="w-full h-64 object-cover object-top mb-4">
+                        <h3 class="text-[#0054a6] font-bold text-lg leading-tight">Dr. Shrenik Doshi</h3>
+                        <p class="text-[11px] text-gray-700 font-semibold uppercase mt-2 min-h-[40px]">MD, DM Cardiology (Gold Medalist), FESC</p>
+                    </div>
+                    <div class="flex flex-col">
+                        <button class="w-full bg-[#0054a6] text-white py-2 text-sm font-semibold hover:bg-blue-900 transition">View Complete Profile</button>
+                        <button class="w-full bg-[#14b8a6] text-white py-3 text-sm font-bold uppercase hover:bg-teal-600 transition">Request An Appointment</button>
+                    </div>
+                </div>
+
+                <div class="swiper-slide h-auto border border-gray-200 bg-white flex flex-col shadow-sm">
+                    <div class="p-4 flex-grow text-center">
+                        <img src="./src/2ed4eecd877434ca9e29c22f519c0317 (1).jpg"  class="w-full h-64 object-cover object-top mb-4">
+                        <h3 class="text-[#0054a6] font-bold text-lg leading-tight">Dr. Madhav Upadhyay</h3>
+                        <p class="text-[11px] text-gray-700 font-semibold uppercase mt-2 min-h-[40px]">MS, M.Ch, CVTS (AIIMS), FACVS</p>
+                    </div>
+                    <div class="flex flex-col">
+                        <button class="w-full bg-[#0054a6] text-white py-2 text-sm font-semibold hover:bg-blue-900 transition">View Complete Profile</button>
+                        <button class="w-full bg-[#14b8a6] text-white py-3 text-sm font-bold uppercase hover:bg-teal-600 transition">Request An Appointment</button>
+                    </div>
+                </div>
+
+                <div class="swiper-slide h-auto border border-gray-200 bg-white flex flex-col shadow-sm">
+                    <div class="p-4 flex-grow text-center">
+                        <img src="./src/4997cbf96c0f9ad61c4893a97f43cd9a.jpg" class="w-full h-64 object-cover object-top mb-4">
+                        <h3 class="text-[#0054a6] font-bold text-lg leading-tight">Dr. Expert Name</h3>
+                        <p class="text-[11px] text-gray-700 font-semibold uppercase mt-2 min-h-[40px]">Specialist Description Goes Here</p>
+                    </div>
+                    <div class="flex flex-col">
+                        <button class="w-full bg-[#0054a6] text-white py-2 text-sm font-semibold">View Complete Profile</button>
+                        <button class="w-full bg-[#14b8a6] text-white py-3 text-sm font-bold uppercase">Request An Appointment</button>
+                    </div>
+                </div>
+
+                <div class="swiper-slide h-auto border border-gray-200 bg-white flex flex-col shadow-sm">
+                    <div class="p-4 flex-grow text-center"><img src="./src/feb356b762af2cea9d858b4a8caed600.png" class="w-full h-64 object-cover object-top mb-4"><h3 class="text-[#0054a6] font-bold text-lg leading-tight">Dr. Expert Seven</h3><p class="text-[11px] text-gray-700 font-semibold uppercase mt-2 min-h-[40px]">Specialist Description</p></div>
+                    <div class="flex flex-col"><button class="w-full bg-[#0054a6] text-white py-2 text-sm font-semibold">View Complete Profile</button><button class="w-full bg-[#14b8a6] text-white py-3 text-sm font-bold uppercase">Request An Appointment</button></div>
+                </div>
+
+                <div class="swiper-slide h-auto border border-gray-200 bg-white flex flex-col shadow-sm">
+                    <div class="p-4 flex-grow text-center"><img src="./src/b005e72b8dcc216ce8b456ad2f852b79 (1).jpg" class="w-full h-64 object-cover object-top mb-4"><h3 class="text-[#0054a6] font-bold text-lg leading-tight">Dr. Expert Eight</h3><p class="text-[11px] text-gray-700 font-semibold uppercase mt-2 min-h-[40px]">Specialist Description</p></div>
+                    <div class="flex flex-col"><button class="w-full bg-[#0054a6] text-white py-2 text-sm font-semibold">View Complete Profile</button><button class="w-full bg-[#14b8a6] text-white py-3 text-sm font-bold uppercase">Request An Appointment</button></div>
+                </div>
+
+                <div class="swiper-slide h-auto border border-gray-200 bg-white flex flex-col shadow-sm">
+                    <div class="p-4 flex-grow text-center"><img src="./src/54f048dcdc09edd5ae525e55d611d44b.png" class="w-full h-64 object-cover object-top mb-4"><h3 class="text-[#0054a6] font-bold text-lg leading-tight">Dr. Expert Nine</h3><p class="text-[11px] text-gray-700 font-semibold uppercase mt-2 min-h-[40px]">Specialist Description</p></div>
+                    <div class="flex flex-col"><button class="w-full bg-[#0054a6] text-white py-2 text-sm font-semibold">View Complete Profile</button><button class="w-full bg-[#14b8a6] text-white py-3 text-sm font-bold uppercase">Request An Appointment</button></div>
+                </div>
+
+                <div class="swiper-slide h-auto border border-gray-200 bg-white flex flex-col shadow-sm">
+                    <div class="p-4 flex-grow text-center"><img src="./src/9897459948fa01c18850aea4186b3586.jpg" class="w-full h-64 object-cover object-top mb-4"><h3 class="text-[#0054a6] font-bold text-lg leading-tight">Dr. Expert Ten</h3><p class="text-[11px] text-gray-700 font-semibold uppercase mt-2 min-h-[40px]">Specialist Description</p></div>
+                    <div class="flex flex-col"><button class="w-full bg-[#0054a6] text-white py-2 text-sm font-semibold">View Complete Profile</button><button class="w-full bg-[#14b8a6] text-white py-3 text-sm font-bold uppercase">Request An Appointment</button></div>
+                </div>
+
+                <div class="swiper-slide h-auto border border-gray-200 bg-white flex flex-col shadow-sm">
+                    <div class="p-4 flex-grow text-center"><img src="./src/7b2c25f372c1f5d4916d9bea23f68faf.jpg" class="w-full h-64 object-cover object-top mb-4"><h3 class="text-[#0054a6] font-bold text-lg leading-tight">Dr. Expert Eleven</h3><p class="text-[11px] text-gray-700 font-semibold uppercase mt-2 min-h-[40px]">Specialist Description</p></div>
+                    <div class="flex flex-col"><button class="w-full bg-[#0054a6] text-white py-2 text-sm font-semibold">View Complete Profile</button><button class="w-full bg-[#14b8a6] text-white py-3 text-sm font-bold uppercase">Request An Appointment</button></div>
+                </div>
+
+                <div class="swiper-slide h-auto border border-gray-200 bg-white flex flex-col shadow-sm">
+                    <div class="p-4 flex-grow text-center"><img src="./src/0900193558c61979a20aa63d9505b8fd.png" class="w-full h-64 object-cover object-top mb-4"><h3 class="text-[#0054a6] font-bold text-lg leading-tight">Dr. Expert Twelve</h3><p class="text-[11px] text-gray-700 font-semibold uppercase mt-2 min-h-[40px]">Specialist Description</p></div>
+                    <div class="flex flex-col"><button class="w-full bg-[#0054a6] text-white py-2 text-sm font-semibold">View Complete Profile</button><button class="w-full bg-[#14b8a6] text-white py-3 text-sm font-bold uppercase">Request An Appointment</button></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="swiper-button-prev !text-white !bg-[#14b8a6] !w-10 !h-10 rounded-full after:!text-lg !absolute !left-0 md:!-left-4 !top-1/2 !-translate-y-1/2 !z-10 shadow-md"><</div>
+        <div class="swiper-button-next !text-white !bg-[#14b8a6] !w-10 !h-10 rounded-full after:!text-lg !absolute !right-0 md:!-right-4 !top-1/2 !-translate-y-1/2 !z-10 shadow-md">></div>
+    </div>
+</section>
+
+<section id="stats-section" class="bg-[#0054a6] py-16 text-white font-sans">
+    <div class="max-w-[1200px] mx-auto px-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            
+            <div class="stat-item">
+                <div class="flex justify-center mb-4 text-4xl">
+                 <i class="ri-hospital-line"></i> </div>
+                <div class="text-4xl md:text-5xl font-bold mb-2">
+                    <span class="counter" data-target="43800">0</span>
+                </div>
+                <p class="text-[12px] md:text-sm font-bold uppercase tracking-wider">Journey Starts From</p>
+            </div>
+
+            <div class="stat-item">
+                <div class="flex justify-center mb-4 text-4xl">
+                  <i class="ri-stethoscope-line"></i></i>
+                </div>
+                <div class="text-4xl md:text-5xl font-bold mb-2">
+                    <span class="counter" data-target="115">0</span>
+                </div>
+                <p class="text-[12px] md:text-sm font-bold uppercase tracking-wider">Clinical Services</p>
+            </div>
+
+            <div class="stat-item">
+                <div class="flex justify-center mb-4 text-4xl">
+                 <i class="ri-user-fill"></i></i>
+                </div>
+                <div class="text-4xl md:text-5xl font-bold mb-2">
+                    <span class="counter" data-target="25">0</span>
+                </div>
+                <p class="text-[12px] md:text-sm font-bold uppercase tracking-wider">Our Doctors</p>
+            </div>
+
+            <div class="stat-item">
+                <div class="flex justify-center mb-4 text-4xl">
+                   <i class="ri-emotion-happy-line"></i>
+                </div>
+                <div class="text-4xl md:text-5xl font-bold mb-2">
+                    <span class="counter" data-target="525">0</span>
+                </div>
+                <p class="text-[12px] md:text-sm font-bold uppercase tracking-wider">Happy Patients</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="max-w-[1440px] mx-auto px-4 py-16 font-sans">
+
+    
+    <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#0054a6] mb-2">Health Checkup Plans</h2>
+        <div class="flex justify-center mt-2">
+            <div class=" flex text-[35px] space-x-1">
+                <span class="rotate-45 block">🧬</span>
+            </div>
+        </div>
+        <p class="text-gray-600 mt-4 text-sm md:text-base">Ensure your family's good health with our Health Check-up Packages.</p>
+    </div>
+
+    <div class="relative px-2 md:px-14 group">
+        <div class="swiper healthSwiper">
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide h-auto border border-gray-100 bg-white flex flex-col shadow-sm text-center relative overflow-hidden transition-all group hover:shadow-xl">
+                    <div class="h-64 overflow-hidden">
+                        <img src="./src/3e6dfc9cd4317242ad6acaef1b909756.jpeg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="absolute top-[220px] left-1/2 -translate-x-1/2 !z-10 w-20 h-20 bg-[#14b8a6] rounded-full flex items-center justify-center text-white text-4xl shadow-md border-4 border-white">
+                         <i class="ri-stethoscope-line"></i></i></i> </div>
+                    <div class="p-6 pt-16 flex-grow flex flex-col justify-between">
+                        <h3 class="text-[#0054a6] font-semibold text-lg leading-tight mb-6">
+                            Executive Female - Rs. 8000/-
+                        </h3>
+                        <a href="#" class="inline-flex items-center self-center px-4 py-2 border border-[#14b8a6] text-[#14b8a6] text-xs font-bold uppercase tracking-wider relative overflow-hidden group/btn hover:text-white hover:bg-[#14b8a6] transition-all">
+                            Read More <span class="ml-1">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide h-auto border border-gray-100 bg-white flex flex-col shadow-sm text-center relative overflow-hidden transition-all group hover:shadow-xl">
+                    <div class="h-64 overflow-hidden"><img src="./src/ee41084386ddf2b21db3f1ec0f8122e4.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
+                    <div class="absolute top-[220px] left-1/2 -translate-x-1/2 !z-10 w-20 h-20 bg-[#14b8a6] rounded-full flex items-center justify-center text-white text-4xl shadow-md border-4 border-white">   <i class="ri-stethoscope-line"></i></i></div>
+                    <div class="p-6 pt-16 flex-grow flex flex-col justify-between">
+                        <h3 class="text-[#0054a6] font-semibold text-lg leading-tight mb-6">Executive Male - Rs. 8000/-</h3>
+                        <a href="#" class="inline-flex items-center self-center px-4 py-2 border border-[#14b8a6] text-[#14b8a6] text-xs font-bold uppercase tracking-wider transition-all hover:text-white hover:bg-[#14b8a6]">Read More <span class="ml-1">→</span></a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide h-auto border border-gray-100 bg-white flex flex-col shadow-sm text-center relative overflow-hidden transition-all group hover:shadow-xl">
+                    <div class="h-64 overflow-hidden"><img src="./src/fbf01841560deb1c5e069f826a717797.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
+                    <div class="absolute top-[220px] left-1/2 -translate-x-1/2 !z-10 w-20 h-20 bg-[#14b8a6] rounded-full flex items-center justify-center text-white text-4xl shadow-md border-4 border-white">   <i class="ri-stethoscope-line"></i></i></div>
+                    <div class="p-6 pt-16 flex-grow flex flex-col justify-between">
+                        <h3 class="text-[#0054a6] font-semibold text-lg leading-tight mb-6">Premium - Rs. 15000/-</h3>
+                        <a href="#" class="inline-flex items-center self-center px-4 py-2 border border-[#14b8a6] text-[#14b8a6] text-xs font-bold uppercase tracking-wider transition-all hover:text-white hover:bg-[#14b8a6]">Read More <span class="ml-1">→</span></a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide h-auto border border-gray-100 bg-white flex flex-col shadow-sm text-center relative overflow-hidden transition-all group hover:shadow-xl">
+                    <div class="h-64 overflow-hidden"><img src="./src/c8b399dc0411b2898fe023fef149c924.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
+                    <div class="absolute top-[220px] left-1/2 -translate-x-1/2 !z-10 w-20 h-20 bg-[#14b8a6] rounded-full flex items-center justify-center text-white text-4xl shadow-md border-4 border-white">   <i class="ri-stethoscope-line"></i></i></div>
+                    <div class="p-6 pt-16 flex-grow flex flex-col justify-between">
+                        <h3 class="text-[#0054a6] font-semibold text-lg leading-tight mb-6">Platinum - Rs. 20000/-</h3>
+                        <a href="#" class="inline-flex items-center self-center px-4 py-2 border border-[#14b8a6] text-[#14b8a6] text-xs font-bold uppercase tracking-wider transition-all hover:text-white hover:bg-[#14b8a6]">Read More <span class="ml-1">→</span></a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide h-auto border border-gray-100 bg-white flex flex-col shadow-sm text-center relative overflow-hidden transition-all group hover:shadow-xl">
+                    <div class="h-64 overflow-hidden"><img src="./src/2f13a6fae516672e0ecad0f367662658.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform"></div>
+                    <div class="absolute top-[220px] left-1/2 -translate-x-1/2 !z-10 w-20 h-20 bg-[#14b8a6] rounded-full flex items-center justify-center text-white text-4xl shadow-md border-4 border-white">   <i class="ri-stethoscope-line"></i></i></i></div>
+                    <div class="p-6 pt-16 flex-grow flex flex-col justify-between"><h3 class="text-[#0054a6] font-semibold text-lg mb-6">Basic Female - Rs. 5000/-</h3><a href="#" class="inline-flex items-center self-center px-4 py-2 border border-[#14b8a6] text-[#14b8a6] text-xs font-bold uppercase tracking-wider transition-all hover:text-white hover:bg-[#14b8a6]">Read More <span class="ml-1">→</span></a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-button-prev !absolute !left-0 !top-1/2 !-translate-y-1/2 !z-20 !w-12 !h-12 !bg-[#14b8a6] !text-white rounded-full after:!text-xl shadow-xl border-4 border-white transition-all hover:!bg-[#0054a6]"><</div>
+        
+        <div class="swiper-button-next !absolute !right-0 !top-1/2 !-translate-y-1/2 !z-20 !w-12 !h-12 !bg-[#14b8a6] !text-white rounded-full after:!text-xl shadow-xl border-4 border-white transition-all hover:!bg-[#0054a6]">></div>
+    </div>
+</section>
+
+<section class="bg-[#14b8a6] py-16 font-sans">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-12">
+        
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-10 text-left">Video Testimonials</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="bg-white p-1 shadow-md transition-all duration-300 hover:shadow-2xl">
+                <div class="relative h-48 md:h-56 overflow-hidden group">
+                    <img src="./src/0e84bf6cfa7b9585e9ffe87a6c32bd08.png" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-all">
+                        <div class="w-12 h-12 bg-[#0054a6] rounded-full flex items-center justify-center text-white shadow-lg">
+                            <i class="ri-play-mini-fill text-2xl"></i> </div>
+                    </div>
+                </div>
+                <div class="bg-[#0054a6] p-4 min-h-[90px] flex items-center justify-center text-center">
+                    <p class="text-white text-[13px] font-medium leading-tight">Mr. Partha Bose, TKR surgery successfully done by Dr Paresh Pandya</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-1 shadow-md transition-all duration-300 hover:shadow-2xl">
+                <div class="relative h-48 md:h-56 overflow-hidden group">
+                    <img src="./src/dc7d306cd9a8d5e96d0d5e6746bc90c1.jpg" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-all">
+                        <div class="w-12 h-12 bg-[#0054a6] rounded-full flex items-center justify-center text-white shadow-lg">
+                            <i class="ri-play-mini-fill text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#0054a6] p-4 min-h-[90px] flex items-center justify-center text-center">
+                    <p class="text-white text-[13px] font-medium leading-tight">Testimonial by Mr. Sureshbhai Khatod</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-1 shadow-md transition-all duration-300 hover:shadow-2xl">
+                <div class="relative h-48 md:h-56 overflow-hidden group">
+                    <img src="./src/a51a5c8f743c3611cca70e782ce1c264.jpg" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-all">
+                        <div class="w-12 h-12 bg-[#0054a6] rounded-full flex items-center justify-center text-white shadow-lg">
+                            <i class="ri-play-mini-fill text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#0054a6] p-4 min-h-[90px] flex items-center justify-center text-center">
+                    <p class="text-white text-[13px] font-medium leading-tight">Complex CARDIAC HYBRID case (Interventional + Surgical) from our SYNERGY desk</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-1 shadow-md transition-all duration-300 hover:shadow-2xl">
+                <div class="relative h-48 md:h-56 overflow-hidden group">
+                    <img src="./src/ca25d1b45efb110b1b6223e62697605f.jpg" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-all">
+                        <div class="w-12 h-12 bg-[#0054a6] rounded-full flex items-center justify-center text-white shadow-lg">
+                            <i class="ri-play-mini-fill text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#0054a6] p-4 min-h-[90px] flex items-center justify-center text-center">
+                    <p class="text-white text-[13px] font-medium leading-tight">Mr. Vinodray Bhimjyani - Patient Testimonials</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="max-w-[1440px] mx-auto px-4 py-16 font-sans bg-white">
+    
+    <div class="text-center mb-12">
+        <h2 class="text-[#0054a6] text-3xl md:text-4xl font-bold mb-2">Synergy Plus</h2>
+        <div class="flex justify-center mb-4">
+           <div class="flex items-center justify-center text-[#14b8a6] text-4xl mt-2">
+        
+                <span class="rotate-45 block">🧬</span>
+            </div>
+        </div>
+        <p class="text-gray-700 font-medium">Get the Latest Synergy Superspeciality Hospital Update right here.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-12">
+        
+        <div class="flex flex-col">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">News & Events</h3>
+            <div class="border border-[#14b8a6] p-1 flex-grow group">
+                <div class="relative overflow-hidden">
+                    <div class="absolute top-0 left-0 bg-[#0054a6] text-white p-2 z-10 text-center min-w-[50px]">
+                        <span class="block text-xl font-bold leading-none">10</span>
+                        <span class="text-[10px] uppercase">Feb</span>
+                    </div>
+                    <img src="./src/e96ef9a2dad22e91dcc2c7b40c75acd7.jpg" class="w-full h-64 object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                </div>
+                <div class="p-6">
+                    <h4 class="text-[#0054a6] font-bold text-xl mb-4 leading-tight">Star Synergy Hospital - Mavdi Road - Rajkot</h4>
+                    <p class="text-gray-600 text-sm mb-6">Our another Unit Star Synergy Hospital Started from February 2022,</p>
+                    <a href="#" class="inline-block bg-[#14b8a6] text-white px-6 py-2 text-sm font-bold uppercase transition-transform hover:scale-105">Read More →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">Blog</h3>
+            <div class="border border-[#14b8a6] p-1 flex-grow group shadow-sm hover:shadow-md transition-shadow">
+                <div class="relative overflow-hidden">
+                    <div class="absolute top-0 left-0 bg-[#0054a6] text-white p-2 z-10 text-center min-w-[50px]">
+                        <span class="block text-xl font-bold leading-none">07</span>
+                        <span class="text-[10px] uppercase">Oct</span>
+                    </div>
+                    <img src="./src/16aaa05617179696869af8ed0ca58a05 (1).png" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-6">
+                    <h4 class="text-[#0054a6] font-bold text-xl mb-4 leading-tight">Best Multispecialty Hospital In Rajkot: What Makes Synergy Hospital Stand Out?</h4>
+                    <p class="text-gray-600 text-sm mb-6 line-clamp-3">Choosing the right hospital is one of the most important decisions you can make for your health...</p>
+                    <a href="#" class="inline-block bg-[#14b8a6] text-white px-6 py-2 text-sm font-bold uppercase transition-transform hover:scale-105">Read More →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">Awards & Achievements</h3>
+            <div class="border border-[#14b8a6] p-1 flex-grow group bg-gray-50">
+                <div class="relative overflow-hidden h-64 border-b border-gray-100">
+                    <img src="./src/0c2e42d45ab610a8b9247cab7bfa874d.png" class="w-full h-full object-contain p-4">
+                </div>
+                <div class="p-6">
+                    <h4 class="text-[#0054a6] font-bold text-xl mb-4 leading-tight">First Digital NABH Hospital In Saurashtra & Kutch Region</h4>
+                    <div class="mb-8"></div> <a href="#" class="inline-block bg-[#14b8a6] text-white px-6 py-2 text-sm font-bold uppercase transition-transform hover:scale-105">Read More →</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<div id="footer"></div>
+
+<script>
+fetch("footer.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
+});
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const healthSwiper = new Swiper('.healthSwiper', {
+      slidesPerView: 1,   
+      spaceBetween: 30,      
+      loop: true,            
+      centeredSlides: false, 
+      autoplay: {
+        delay: 5000,       
+        disableOnInteraction: false,
+      },
+     
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      // Responsive breakpoints
+      breakpoints: {
+        640: { slidesPerView: 2 }, 
+        1024: { slidesPerView: 3 }, 
+        1280: { slidesPerView: 4 }  
+      },
+    });
+  });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.counter');
+    const animationDuration = 2000; // 2 સેકન્ડમાં કાઉન્ટિંગ પૂરું થશે
+
+    const startCounter = (counter) => {
+        const target = +counter.getAttribute('data-target');
+        const increment = target / (animationDuration / 16); // 60fps મુજબ સ્ટેપ્સ
+
+        let currentCount = 0;
+        const update = () => {
+            currentCount += increment;
+            if (currentCount < target) {
+                counter.innerText = Math.ceil(currentCount).toLocaleString();
+                requestAnimationFrame(update);
+            } else {
+                counter.innerText = target.toLocaleString();
+            }
+        };
+        update();
+    };
+
+    // Intersection Observer: જ્યારે સેક્શન સ્ક્રીન પર આવે ત્યારે જ ચાલશે
+    const observerOptions = {
+        threshold: 0.3 // જ્યારે 30% સેક્શન દેખાય ત્યારે શરૂ થશે
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // કાઉન્ટિંગ શરૂ કરો
+                startCounter(entry.target);
+                // એકવાર કાઉન્ટિંગ થઈ જાય એટલે ઓબ્ઝર્વર બંધ કરી દો (વારંવાર ના થાય એટલે)
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    counters.forEach(counter => observer.observe(counter));
+});
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.expertsSwiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 4 },
+        1280: { slidesPerView: 5 },
+      },
+    });
+  });
+</script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                effect: "fade", // Smooth transition mate fade effect
+                fadeEffect: {
+                    crossFade: true
+                },
+                loop: true, // Infinite loop
+                speed: 1000, // Slide transition ni speed (1 second)
+                autoplay: {
+                    delay: 4000, // Every 4 seconds slide change thase
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    dynamicBullets: true, // Dots ni size nan-moti thase
+                },
+            });
+        </script>
+
+        
+</body>
+
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div id="navbar"></div>
+
+<script>
+fetch("../../navbar.html")
+.then(response => response.text())
+.then(data => {
+  document.getElementById("navbar").innerHTML = data;
+
+  // MENU TOGGLE
+  const menuToggle = document.getElementById("menu-toggle");
+  const navMenu = document.getElementById("nav-menu");
+
+  if(menuToggle){
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("hidden");
+    });
+  }
+
+  // MOBILE DROPDOWN
+  const dropdowns = document.querySelectorAll("#nav-menu .group");
+
+  dropdowns.forEach(drop => {
+    drop.addEventListener("click", function(e){
+      if(window.innerWidth < 1024){
+        const submenu = this.querySelector("ul");
+        if(e.target.tagName !== "A" && submenu){
+          submenu.classList.toggle("hidden");
+        }
+      }
+    });
+  });
+
+});
+</script>
+
+    
+        <div class="relative w-full overflow-hidden">
+        
+        <div class="relative h-[400px] bg-cover bg-center flex items-center justify-center" 
+             style="background-image: url('../../src/health-checkup.jpg');">
+            
+            <div class="absolute "></div>
+
+            <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+                <svg class="relative block w-full h-[150px]" preserveAspectRatio="none" viewBox="0 0 1200 120">
+                    <path d="M0,80 L400,120 L1200,40 L1200,120 L0,120 Z" fill="#00335a"></path>
+                </svg>
+            </div>
+            
+            <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+                <svg class="relative block w-full h-[100px]" preserveAspectRatio="none" viewBox="0 0 1200 120">
+                    <path d="M0,60 L600,120 L1200,20 L1200,120 L0,120 Z" fill="#209ca6"></path>
+                </svg>
+            </div>
+        </div>
+
+        <div class="bg-[#209ca6] py-16 px-10">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-white text-5xl font-bold">Cardiology Pakcage</h2>
+            </div>
+        </div>
+    </div>
+<section class="max-w-7xl mx-auto px-4 py-10">
+
+<div class="grid lg:grid-cols-4 gap-8">
+
+<!-- LEFT SIDEBAR -->
+<div class="lg:col-span-1 space-y-6">
+
+<!-- Corporate Video -->
+<div class="bg-white shadow">
+<div class="bg-blue-700 text-white px-4 py-3 font-semibold">
+Corporate Video
+</div>
+
+<div class="p-3">
+<iframe class="w-full h-44"
+src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+title="YouTube video"
+allowfullscreen>
+</iframe>
+</div>
+</div>
+
+<!-- Specialities -->
+<div class="bg-white shadow">
+
+<div class="bg-blue-700 text-white px-4 py-3 font-semibold">
+Specialities
+</div>
+
+<ul class="text-sm">
+
+<li class="border-b px-4 py-2 flex items-center gap-2 hover:bg-gray-100">
+<i class="ri-stethoscope-line text-blue-600"></i> Anaesthesia
+</li>
+
+<li class="border-b px-4 py-2 flex items-center gap-2 hover:bg-gray-100">
+<i class="ri-stethoscope-line text-blue-600"></i> Arthroscopy & Sports Medicine
+</li>
+
+<li class="border-b px-4 py-2 flex items-center gap-2 hover:bg-gray-100">
+<i class="ri-stethoscope-line text-blue-600"></i> Cardiology
+</li>
+
+<li class="border-b px-4 py-2 flex items-center gap-2 hover:bg-gray-100">
+<i class="ri-stethoscope-line text-blue-600"></i> Cardiothoracic & Vascular Surgery
+</li>
+
+<li class="border-b px-4 py-2 flex items-center gap-2 hover:bg-gray-100">
+<i class="ri-stethoscope-line text-blue-600"></i> Critical Care & Pulmonology
+</li>
+
+<li class="border-b px-4 py-2 flex items-center gap-2 hover:bg-gray-100">
+<i class="ri-stethoscope-line text-blue-600"></i> Gastroenterology
+</li>
+
+<li class="border-b px-4 py-2 flex items-center gap-2 hover:bg-gray-100">
+<i class="ri-stethoscope-line text-blue-600"></i> Gastrosurgery
+</li>
+
+<li class="border-b px-4 py-2 flex items-center gap-2 hover:bg-gray-100">
+<i class="ri-stethoscope-line text-blue-600"></i> General Surgery
+</li>
+
+<li class="border-b px-4 py-2 flex items-center gap-2 hover:bg-gray-100">
+<i class="ri-stethoscope-line text-blue-600"></i> Nephrology
+</li>
+
+<li class="border-b px-4 py-2 flex items-center gap-2 hover:bg-gray-100">
+<i class="ri-stethoscope-line text-blue-600"></i> Neuro Surgeons
+</li>
+
+<li class="border-b px-4 py-2 flex items-center gap-2 hover:bg-gray-100">
+<i class="ri-stethoscope-line text-blue-600"></i> Neurology
+</li>
+
+<li class="border-b px-4 py-2 flex items-center gap-2 hover:bg-gray-100">
+<i class="ri-stethoscope-line text-blue-600"></i> Oncology
+</li>
+
+<li class="border-b px-4 py-2 flex items-center gap-2 hover:bg-gray-100">
+<i class="ri-stethoscope-line text-blue-600"></i> Pathology
+</li>
+
+<li class="border-b px-4 py-2 flex items-center gap-2 hover:bg-gray-100">
+<i class="ri-stethoscope-line text-blue-600"></i> Plastic Surgery
+</li>
+
+<li class="px-4 py-2 flex items-center gap-2 hover:bg-gray-100">
+<i class="ri-stethoscope-line text-blue-600"></i> Radiology
+</li>
+
+</ul>
+</div>
+
+</div>
+
+
+<!-- RIGHT CONTENT -->
+<div class="lg:col-span-3 bg-white shadow p-6">
+
+<h2 class="text-3xl font-semibold text-blue-700 mb-6">
+Cardiology Package
+</h2>
+
+<div class="grid md:grid-cols-2 gap-8">
+
+<!-- LIST -->
+<div>
+<ul class="space-y-2 text-gray-700">
+<li class="flex gap-2"><i class="ri-heart-pulse-line text-blue-600"></i> CBC</li>
+<li class="flex gap-2"><i class="ri-heart-pulse-line text-blue-600"></i> Blood Sugar (F+PPBS)</li>
+<li class="flex gap-2"><i class="ri-heart-pulse-line text-blue-600"></i> HbA1c</li>
+<li class="flex gap-2"><i class="ri-heart-pulse-line text-blue-600"></i> S. Electrolytes</li>
+<li class="flex gap-2"><i class="ri-heart-pulse-line text-blue-600"></i> S. Creatinine</li>
+<li class="flex gap-2"><i class="ri-heart-pulse-line text-blue-600"></i> SGPT</li>
+<li class="flex gap-2"><i class="ri-heart-pulse-line text-blue-600"></i> TSH</li>
+
+<li class="flex gap-2"><i class="ri-heart-pulse-line text-blue-600"></i> Lipid Profile</li>
+<li class="flex gap-2"><i class="ri-heart-pulse-line text-blue-600"></i> ECG</li>
+<li class="flex gap-2"><i class="ri-heart-pulse-line text-blue-600"></i> 2D ECHO/TMT</li>
+<li class="flex gap-2"><i class="ri-heart-pulse-line text-blue-600"></i> ECHO Screening</li>
+<li class="flex gap-2"><i class="ri-heart-pulse-line text-blue-600"></i> X-RAY Chest PA</li>
+<li class="flex gap-2"><i class="ri-heart-pulse-line text-blue-600"></i> Dietician Consultation</li>
+<li class="flex gap-2"><i class="ri-heart-pulse-line text-blue-600"></i> Cardiologist Consultation</li>
+</ul>
+<button class="mt-6 bg-teal-500 text-white px-6 py-2 hover:bg-teal-600 transition">
+Book A Health Checkup
+</button>
+</div>
+<!-- IMAGE -->
+<div class="relative">
+<img
+src="/src/2f13a6fae516672e0ecad0f367662658 (1).jpg"
+class="rounded-2xl border-4 border-blue-600"
+/>
+<!-- Price Badge -->
+<div class="absolute -top-5 -right-5 bg-red-600 text-white text-sm font-bold px-4 py-3 rotate-12 rounded-full">
+Rs. 5500/-
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div id="footer"></div>
+
+<script>
+fetch("../../footer.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
+});
+</script>
+</body>
+</html>

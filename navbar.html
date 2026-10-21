@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+
+<body>
+    <div
+        class="bg-[#005596] text-white py-2 px-4 md:px-10 flex flex-col sm:flex-row justify-between items-center text-[10px] md:text-sm gap-2">
+        <div class="flex gap-3 md:gap-4 items-center">
+            <a href="#" class="hover:underline">International Patients</a>
+            <span class="opacity-50">|</span>
+            <a href="#" class="hover:underline">Feedback</a>
+            <span class="opacity-50">|</span>
+            <a href="#" class="hover:underline">Career With Us</a>
+        </div>
+        <div class="flex items-center gap-2">
+            <span>Send Mail Us :</span>
+            <a href="mailto:enquiry@synergyhospital.co.in"
+                class="font-semibold hover:text-blue-200">enquiry@synergyhospital.co.in</a>
+        </div>
+    </div>
+
+    <div class="bg-white py-4 px-4 md:px-10 flex flex-col lg:flex-row justify-between items-center gap-6">
+        <div class="flex items-center justify-between w-full lg:w-auto">
+            <img src="/src/logo (1).png" alt="Synergy Hospital" class="h-12 md:h-16">
+            <button id="menu-toggle" class="lg:hidden text-3xl text-[#005596]">
+                <i class="ri-menu-line"></i>
+            </button>
+        </div>
+
+        <div class="hidden sm:flex flex-wrap justify-center gap-4 md:gap-8 text-xs md:text-sm">
+            <div class="flex items-center gap-3 border-r pr-4 md:pr-8 last:border-0 border-gray-200">
+                <div class="text-[#0096a3] text-2xl md:text-3xl">🚑</div>
+                <div>
+                    <p class="text-[#005596] font-bold">24x7 Emergency</p>
+                    <p class="text-gray-600 font-medium whitespace-nowrap">0281 6195050</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3 border-r pr-4 md:pr-8 last:border-0 border-gray-200">
+                <div class="text-[#0096a3] text-2xl md:text-3xl">🎧</div>
+                <div>
+                    <p class="text-[#005596] font-bold">Helpline</p>
+                    <p class="text-gray-600 font-medium whitespace-nowrap">0281 6195000</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="text-[#0096a3] text-2xl md:text-3xl">🔗</div>
+                <div>
+                    <p class="text-[#005596] font-bold">Follow Us</p>
+                    <div class="flex gap-2 mt-1">
+                        <span
+                            class="w-6 h-6 bg-[#3b5998] text-white flex items-center justify-center rounded text-xs cursor-pointer">f</span>
+                        <span
+                            class="w-6 h-6 bg-[#00acee] text-white flex items-center justify-center rounded text-xs cursor-pointer">t</span>
+                        <span
+                            class="w-6 h-6 bg-[#c4302b] text-white flex items-center justify-center rounded text-xs cursor-pointer">y</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- NAVBAR -->
+<nav class="bg-[#0096a3] sticky top-0 z-50 w-full relative">
+
+<div class="max-w-screen-2xl mx-auto flex flex-col lg:flex-row items-stretch">
+
+<ul id="nav-menu"
+class="hidden lg:flex flex-col lg:flex-row items-start lg:items-center text-white font-semibold text-sm lg:w-auto absolute lg:relative top-full right-4 lg:right-auto bg-[#0096a3] rounded-lg shadow-lg">
+<li class="hover:bg-[#0c4da2] px-6 py-4 w-full lg:w-auto cursor-pointer">
+Home
+</li>
+
+<!-- ABOUT US -->
+<li class="px-6 py-4 hover:bg-[#0c4da2] transition w-full lg:w-auto flex items-center gap-1 cursor-pointer group relative">
+
+About Us <span class="text-[10px]">▼</span>
+
+<ul class="absolute top-full left-0 bg-white text-gray-800 shadow-xl hidden group-hover:block w-56 border-t-2 border-[#0c4da2]">
+
+<li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/Aboutus/overview.html">Overview</a></li>
+<li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/Aboutus/directmsg.html">Director's Message</a></li>
+<li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/Aboutus/management.html">Management Team</a></li>
+<li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/Aboutus/infrastructure.html">Infrastructure</a></li>
+<li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/Aboutus/Vision.html">Vision & Mission</a></li>
+<li class="px-4 py-2 hover:bg-gray-100"><a href="./Aboutus/Facilities.html">Facilities</a></li>
+
+</ul>
+</li>
+
+<!-- SPECIALITIES -->
+<li class="px-6 py-4 hover:bg-[#0c4da2] transition w-full lg:w-auto flex items-center gap-1 cursor-pointer group relative">
+
+<a href="/specialist/specialist.html">Specialities</a>
+<span class="text-[10px]">▼</span>
+
+<ul class="absolute top-full left-0 bg-white text-gray-800 shadow-xl hidden group-hover:block w-56 border-t-2 border-[#0c4da2]">
+
+<li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/specialist/Anaesthesia.html">Anaesthesia</a></li>
+<li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/specialist/Arthroscopy.html">Arthroscopy & Sports Medicine</a></li>
+<li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/specialist/Vascular.html">Cardiothoracic & Vascular Surgery</a></li>
+<li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/specialist/Pulmonology.html">Critical Care & Pulmonology</a></li>
+<li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/specialist/Gastroenterology.html">Gastroenterology</a></li>
+<li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/specialist/Gastrosurgery.html">Gastrosurgery</a></li>
+<li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/specialist/General.html">General Surgery</a></li>
+<li class="px-4 py-2 hover:bg-gray-100"><a href="/specialist/Department.html">Nephrology</a></li>
+
+</ul>
+</li>
+
+<li class="px-6 py-4 hover:bg-[#0c4da2] transition cursor-pointer">Doctors</li>
+
+<!-- SERVICES -->
+<li class="px-6 py-4 hover:bg-[#0c4da2] transition flex items-center gap-1 cursor-pointer relative group">
+  Services <span class="text-[10px]">▼</span>
+
+  <!-- First Dropdown -->
+  <ul class="absolute top-full left-0 bg-white text-gray-800 shadow-xl hidden group-hover:block w-56 border-t-2 border-[#0c4da2]">
+
+    <!-- Health Checkup Plans -->
+    <li class="relative px-4 py-2 hover:bg-gray-100 border-b cursor-pointer group/item">
+      <span>Health Checkup Plans <i class="ri-arrow-right-s-line"></i></span>
+      <!-- Right Dropdown -->
+      <ul class="absolute top-0 left-full bg-white shadow-xl hidden group-hover/item:block w-56 border-l-2 border-[#0c4da2]">
+        <li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/services/Health checkup/cardiology.html">Cardiology</a></li>
+        <li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/services/Health checkup/executive.html">Executive Female</a></li>
+        <li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/services/Health checkup/emale.html">Executive Male</a></li>
+        <li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/services/Health checkup/platinum.html">Platinum</a></li>
+        <li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/services/Health checkup/premium.html">Premium</a></li>
+        <li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/services/Health checkup/preventive.html">Preventive</a></li>
+        <li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/services/Health checkup/senior.html">Senior Citizen</a></li>
+      </ul>
+    </li>
+
+    <!-- Clinical Excellence -->
+    <li class="px-4 py-2 hover:bg-gray-100 border-b">
+      Clinical Excellence
+    </li>
+
+    <!-- Home Care Services -->
+    <li class="relative px-4 py-2 hover:bg-gray-100 border-b cursor-pointer group/item">
+      <span>Home Care Services <i class="ri-arrow-right-s-line"></i></span>
+
+      <!-- Right Dropdown -->
+      <ul class="absolute top-0 left-full bg-white shadow-xl hidden group-hover/item:block w-56 border-l-2 border-[#0c4da2]">
+        <li class="px-4 py-2 hover:bg-gray-100 border-b">Doctor Visit</li>
+        <li class="px-4 py-2 hover:bg-gray-100 border-b">Nursing Care</li>
+        <li class="px-4 py-2 hover:bg-gray-100">Physiotherapy</li>
+      </ul>
+    </li>
+
+  </ul>
+</li>
+<!-- GALLERY -->
+<li class="px-6 py-4 hover:bg-[#0c4da2] transition flex items-center gap-1 cursor-pointer group relative">
+
+Gallery <span class="text-[10px]">▼</span>
+
+<ul class="absolute top-full left-0 bg-white text-gray-800 shadow-xl hidden group-hover:block w-56 border-t-2 border-[#0c4da2]">
+
+<li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/Gallery/hospital.html">Hospital Image Gallery</a></li>
+<li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/Gallery/event.html">Event Image Gallery</a></li>
+<li class="px-4 py-2 hover:bg-gray-100"><a href="/Gallery/video.html">Video Gallery</a></li>
+
+</ul>
+</li>
+
+<!-- NEWS -->
+<li class="px-6 py-4 hover:bg-[#0c4da2] transition flex items-center gap-1 cursor-pointer group relative">
+
+News & Media <span class="text-[10px]">▼</span>
+
+<ul class="absolute top-full left-0 bg-white text-gray-800 shadow-xl hidden group-hover:block w-56 border-t-2 border-[#0c4da2]">
+
+<li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/news&media/news.html">News & Events</a></li>
+<li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/news&media/certification.html">Certifications</a></li>
+<li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/news&media/awards.html">Awards</a></li>
+<li class="px-4 py-2 hover:bg-gray-100 border-b"><a href="/news&media/realease.html">Press Release</a></li>
+<li class="px-4 py-2 hover:bg-gray-100"><a href="/news&media/patienet.html">Patient Testimonials</a></li>
+
+</ul>
+</li>
+
+<li class="px-6 py-4 hover:bg-[#0c4da2] transition cursor-pointer"><a href="/blog.html">Blog</a></li>
+<li class="px-6 py-4 hover:bg-[#0c4da2] transition cursor-pointer"><a href="/contactus.html">Contact Us</a></li>
+
+</ul>
+
+<!-- APPOINTMENT BUTTON -->
+<div class="bg-[#0c4da2] text-white flex items-center px-8 py-4 lg:ml-auto font-bold cursor-pointer hover:bg-blue-900 transition text-sm md:text-base">
+
+<span class="mr-2">📅</span> Book An Appointment
+</div>
+</div>
+</nav>
+<script>
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("hidden");
+});
+
+// MOBILE DROPDOWN
+const dropdowns = document.querySelectorAll("#nav-menu .group");
+
+dropdowns.forEach(drop => {
+  drop.addEventListener("click", function(e){
+
+    if(window.innerWidth < 1024){
+
+      const submenu = this.querySelector("ul");
+
+      // only open dropdown when clicking on parent item
+      if(e.target.tagName !== "A" && submenu){
+        submenu.classList.toggle("hidden");
+      }
+
+    }
+
+  });
+});
+</script>
+
+</body>
+
+</html>

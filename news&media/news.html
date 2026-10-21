@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+   <div id="navbar"></div>
+
+<script>
+fetch("../navbar.html")
+.then(response => response.text())
+.then(data => {
+  document.getElementById("navbar").innerHTML = data;
+
+  // MENU TOGGLE
+  const menuToggle = document.getElementById("menu-toggle");
+  const navMenu = document.getElementById("nav-menu");
+
+  if(menuToggle){
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("hidden");
+    });
+  }
+
+  // MOBILE DROPDOWN
+  const dropdowns = document.querySelectorAll("#nav-menu .group");
+
+  dropdowns.forEach(drop => {
+    drop.addEventListener("click", function(e){
+      if(window.innerWidth < 1024){
+        const submenu = this.querySelector("ul");
+        if(e.target.tagName !== "A" && submenu){
+          submenu.classList.toggle("hidden");
+        }
+      }
+    });
+  });
+
+});
+</script>
+
+
+    <div class="relative w-full overflow-hidden">
+
+        <div class="relative h-[400px] bg-cover bg-center flex items-center justify-center"
+            style="background-image: url('../src/news-event.jpg');">
+
+            <div class="absolute "></div>
+
+            <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+                <svg class="relative block w-full h-[150px]" preserveAspectRatio="none" viewBox="0 0 1200 120">
+                    <path d="M0,80 L400,120 L1200,40 L1200,120 L0,120 Z" fill="#00335a"></path>
+                </svg>
+            </div>
+
+            <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+                <svg class="relative block w-full h-[100px]" preserveAspectRatio="none" viewBox="0 0 1200 120">
+                    <path d="M0,60 L600,120 L1200,20 L1200,120 L0,120 Z" fill="#209ca6"></path>
+                </svg>
+            </div>
+        </div>
+
+        <div class="bg-[#209ca6] py-16 px-10">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-white text-5xl font-bold">News & Events</h2>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="max-w-7xl mx-auto py-16 px-6">
+
+        <div class="grid grid-cols-12 gap-10">
+
+
+            <!-- LEFT SIDE -->
+
+            <div class="col-span-12 lg:col-span-8">
+
+                <h2 class="text-3xl text-blue-900 font-semibold border-b pb-3 mb-6">
+                    News & Events
+                </h2>
+
+
+                <!-- YEAR -->
+
+                <div class="relative mb-6">
+
+                    <div class="inline-block bg-blue-800 text-white px-6 py-2 font-semibold relative">
+                        2022
+                        <div
+                            class="absolute left-4 -bottom-3 w-0 h-0 border-l-[10px] border-r-[10px] border-t-[10px] border-transparent border-t-blue-800">
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <!-- NEWS CARD -->
+
+                <div class="border-2 border-teal-500 bg-white p-6 w-[60%] ">
+
+                    <img src="../src/e96ef9a2dad22e91dcc2c7b40c75acd7 (1).jpg" class="w-full h-[300px] mb-6 mx-auto" />
+
+                    <p class="text-gray-500 mb-2">
+                        February 10
+                    </p>
+
+                    <h3 class="text-blue-900 text-xl mb-4">
+                        Star Synergy Hospital - Mavdi Road - Rajkot
+                    </h3>
+
+                    <button class="bg-teal-500 text-white px-5 py-2 relative">
+
+                        Read More →
+
+                        <span class="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-teal-500"></span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RIGHT SIDEBAR -->
+
+            <div class="col-span-12 lg:col-span-4 space-y-6">
+
+
+                <!-- VIDEO -->
+
+                <div class="bg-white shadow">
+
+                    <div class="bg-blue-800 text-white p-3 font-semibold">
+                        Corporate Video
+                    </div>
+
+                    <div class="p-3">
+
+                        <iframe class="w-full h-52" src="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                        </iframe>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FIND SPECIALIST -->
+
+                <div class="bg-white shadow">
+
+                    <div class="bg-blue-800 text-white p-3 font-semibold">
+                        Find A Specialist
+                    </div>
+
+                    <div class="p-4 space-y-4">
+
+                        <select class="w-full border p-2">
+                            <option>By Department</option>
+                        </select>
+
+                        <select class="w-full border p-2">
+                            <option>By Doctor</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- REQUEST CALL BACK -->
+
+                <div class="bg-white shadow">
+
+                    <div class="bg-blue-800 text-white p-3 font-semibold">
+                        Request A Call Back
+                    </div>
+
+                    <div class="p-4 space-y-3">
+
+                        <input type="text" placeholder="Full Name" class="w-full border p-2" />
+
+                        <input type="text" placeholder="Phone Number" class="w-full border p-2" />
+                        <input type="email" placeholder="Email" class="w-full border p-2" />
+                        <textarea placeholder="Enter Message" class="w-full border p-2 h-24"></textarea>
+                        <button class="bg-teal-500 text-white px-5 py-2 relative">
+                            Send Request
+                            <span
+                                class="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-teal-500"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <div id="footer"></div>
+
+<script>
+fetch("../footer.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
+});
+</script>
+
+</body>
+
+</html>
